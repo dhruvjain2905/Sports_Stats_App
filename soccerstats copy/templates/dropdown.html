@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function updateSetEmailAddress(){
+    var ddl = document.getElementById("somemembers");
+    var selectedOption = ddl.options[ddl.selectedIndex];
+    var liveMemberData = selectedOption.getAttribute("data-livemember");
+    var textBox = document.getElementById("customer_email_address");
+    if(liveMemberData=="1"){
+    	textBox.value = "first@customer_email_address.com";
+    }
+    else if(liveMemberData=="2"){
+    	textBox.value = "second@customer_email_address.com";
+    }   
+}
+</script>
+</head>
+<body>
+<div>        <br />
+        Email:
+        <br>
+        <input type="text" id="customer_email_address" />
+    </div>
+    <div>
+        <br>
+        Counties:
+        <br>
+        <select id="somemembers" onChange="return updateSetEmailAddress()">
+            <option data-livemember="0" value="Select One">Select One</option>
+            <option data-livemember="1" value="Kinjal Dave">Kinjal Dave</option>
+            <option data-livemember="1" value="Krishna">Krishna</option>
+            <option data-livemember="1" value="Rajdhanivora">Rajdhanivora</option>
+            <option data-livemember="1" value="Kavita">Kavita</option>
+            <option data-livemember="1" value="4cgandhi">4cgandhi</option>
+            <option data-livemember="1" value="Bolly4u">Bolly4u</option>
+            <option data-livemember="1" value="Tamilrokers">Tamilrokers</option>
+            <option data-livemember="1" value="jbox">jbox</option>
+            <option data-livemember="1" value="Sarasota">Sarasota</option>
+            <option data-livemember="2" value="Bhakti">Bhakti</option>
+            <option data-livemember="2" value="Broward">Broward</option>
+            <option data-livemember="2" value="JDK Kinkg">JDK Kinkg</option>
+            <option data-livemember="2" value="Hitesh">Hitesh</option>
+            <option data-livemember="2" value="DSP-patel">DSP-patel</option>
+            <option data-livemember="2" value="Mayur">Mayur</option>
+            <option data-livemember="2" value="Sejal Ramanai">Sejal Ramanai</option>
+            <option data-livemember="2" value="Virat Kohali">Virat Kohali</option>
+        </select>
+    </div>
+</body>
+</html>
+output = request.get_json()
+print(output) 
+
+
+out = output.replace('~',' ')
+out = out.split()
+print(out)
